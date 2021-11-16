@@ -15,6 +15,9 @@ class InputField extends Component {
     submitHandler = (e) => {
         e.preventDefault();
         this.props.addTodo(this.state)
+        this.setState({
+            content:''
+        })
     }
 
     render (){
@@ -22,7 +25,7 @@ class InputField extends Component {
             <div>
                 <form onSubmit={this.submitHandler}>
                     <label>Add new To Do?</label>
-                    <input type = "text" onChange={this.changeHandler} />
+                    <input type = "text" onChange={this.changeHandler} value={this.state.content} />
                 </form>
             </div>
         )
