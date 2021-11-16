@@ -33,7 +33,7 @@ class App extends Component {
     render(){
         return (
             <div className='todo-app container'>
-                <h3 className = 'center blue-text'> To Do's: </h3>
+                <h3 className = 'center teal-text'> To Do's: </h3>
                 <ToDos todos={this.state.todos} delTodo={this.delTodo} />
                 <InputField addTodo={this.addTodo} />
             </div>
