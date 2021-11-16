@@ -2,6 +2,7 @@ import React, { Component } from "react";
 
 // Components
 import ToDos from "./Components/todos";
+import InputField from "./Components/todoInput";
 
 class App extends Component {
 
@@ -27,6 +28,7 @@ class App extends Component {
             <div className='todo-app container'>
                 <h3 className = 'center blue-text'> To Do's: </h3>
                 <ToDos todos={this.state.todos} delTodo={this.delTodo} />
+                <InputField />
             </div>
         )
     }

@@ -4,7 +4,10 @@ class InputField extends Component {
     render (){
         return (
             <div>
-                Input Field Component
+                <form>
+                    <label>Add new To Do?</label>
+                    <input type = "text" />
+                </form>
             </div>
         )
     }
