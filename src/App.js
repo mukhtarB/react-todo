@@ -15,9 +15,8 @@ class App extends Component {
     render(){
         return (
             <div className='App'>
-                <h1 className = 'center blue-text'> To Do's: </h1>
-                App.js Class
-                <ToDos {...this.state}/>
+                <h3 className = 'center blue-text'> To Do's: </h3>
+                <ToDos todos={this.state.todos} />
             </div>
         )
     }
