@@ -12,11 +12,21 @@ class App extends Component {
         ]
     }
 
+    delTodo = (id) => {
+        const todos = this.state.todos.filter((todo) => {
+            return todo.id !== id
+        })
+
+        this.setState({
+            todos
+        })
+    }
+
     render(){
         return (
-            <div className='App'>
+            <div className='todo-app container'>
                 <h3 className = 'center blue-text'> To Do's: </h3>
-                <ToDos todos={this.state.todos} />
+                <ToDos todos={this.state.todos} delTodo={this.delTodo} />
             </div>
         )
     }
