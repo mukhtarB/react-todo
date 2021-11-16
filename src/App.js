@@ -23,12 +23,19 @@ class App extends Component {
         })
     }
 
+    addTodo = (todo) => {
+        todo.id = Math.random()
+        this.setState({
+            todos: [...this.state.todos, todo]
+        })
+    }
+
     render(){
         return (
             <div className='todo-app container'>
                 <h3 className = 'center blue-text'> To Do's: </h3>
                 <ToDos todos={this.state.todos} delTodo={this.delTodo} />
-                <InputField />
+                <InputField addTodo={this.addTodo} />
             </div>
         )
     }

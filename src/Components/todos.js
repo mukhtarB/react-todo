@@ -8,9 +8,12 @@ const ToDos = ({todos, delTodo}) => {
         (
             todos.map((todo) => {
                 return (
-                    <div className='collection-item' key={todo.id}>
-                        <li onClick = {() => {delTodo(todo.id)}}> {todo.content} </li>
-                    </div>
+                    <li
+                        onClick = {() => {delTodo(todo.id)}} 
+                        className='collection-item' key={todo.id}
+                    >
+                        {todo.content}
+                    </li>
                 ) 
             })
         )
@@ -19,10 +22,10 @@ const ToDos = ({todos, delTodo}) => {
 
 
     return (
-        <div className = 'todos collection'>
+        <ul className = 'todos collection'>
             {/* {todoList()} */}
             {todoList}
-        </div>
+        </ul>
     )
 }
 

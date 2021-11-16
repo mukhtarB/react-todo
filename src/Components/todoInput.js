@@ -3,22 +3,26 @@ import React, { Component } from "react";
 class InputField extends Component {
 
     state = {
-        formContent: ''
+        content: ''
     }
 
     changeHandler = (e) => {
         this.setState({
-            formContent: e.target.value
+            content: e.target.value
         })
+    }
+
+    submitHandler = (e) => {
+        e.preventDefault();
+        this.props.addTodo(this.state)
     }
 
     render (){
         return (
             <div>
-                <form>
+                <form onSubmit={this.submitHandler}>
                     <label>Add new To Do?</label>
                     <input type = "text" onChange={this.changeHandler} />
-                    {console.log(this.state)}
                 </form>
             </div>
         )
